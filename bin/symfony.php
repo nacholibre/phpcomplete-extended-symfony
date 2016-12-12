@@ -344,10 +344,11 @@ class symfony
                         $definitionFile = $fqcn_file[$definitionFQCN];
                     }
                 }
+
                 $serviceArray['service_fqcn'] = $definitionFQCN;
                 $serviceArray['service_file'] = $definitionFile;
                 $serviceArray['is_public'] = $definition->isPublic();
-                $serviceArray['scope'] = $definition->getScope();
+                //$serviceArray['scope'] = $definition->getScope();
                 $serviceTags = $definition->getTags();
                 foreach ($serviceTags as $tagName => $attr) {
                     $tag_services[$tagName][] = $serviceId;
